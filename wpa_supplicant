@@ -1,0 +1,6 @@
+type            = process
+command         = /etc/dinit.d/scripts/wpa_supplicant.sh
+smooth-recovery = true
+logfile         = /var/log/dinit/wpa_supplicant.log
+depends-on 	= dbusd
+waits-for       = dhcpcd

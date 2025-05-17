@@ -1,0 +1,4 @@
+type 		= process
+command 	= /etc/dinit.d/scripts/seatd.sh
+logfile 	= /var/log/dinit/seatd.log
+depends-on 	= dbusd

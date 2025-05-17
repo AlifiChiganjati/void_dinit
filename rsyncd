@@ -1,0 +1,5 @@
+type       = process
+command    = /etc/dinit.d/scripts/rsyncd.sh
+restart	   = false
+logfile    = /var/log/dinit/rsyncd.log
+depends-on = dbusd

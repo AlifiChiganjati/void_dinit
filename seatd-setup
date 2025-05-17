@@ -1,0 +1,5 @@
+type            = scripted
+after		= login.target
+command         = /etc/dinit.d/scripts/seatd-setup.sh
+logfile         = /var/log/dinit/seatd-setup.log
+depends-on      = seatd

@@ -1,0 +1,4 @@
+type       = process
+command    = /usr/bin/turnstiled
+logfile    = /var/log/dinit/turnstiled.log
+depends-on = dbusd

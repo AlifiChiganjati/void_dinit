@@ -1,4 +1,0 @@
-type = process
-command = /usr/bin/pipewire-pulse
-depends-on = pipewire
-logfile = $HOME/.config/dinit.d/log/pipewire.log

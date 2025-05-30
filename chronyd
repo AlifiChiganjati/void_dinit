@@ -1,0 +1,6 @@
+# chronyd service, cannot handle readiness on its own
+type = process
+command = /usr/bin/chronyd -n -u chrony
+depends-on = network
+depends-on = dbusd
+smooth-recovery = true

@@ -1,0 +1,4 @@
+type = process
+command = /etc/dinit.d/scripts/zramen.sh
+logfile = /var/log/dinit/zramen.log
+depends-on = dbusd

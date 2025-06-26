@@ -3,7 +3,6 @@
 type       = internal
 restart    = false
 options    = runs-on-console
-waits-for  = sysctl
 
 depends-on = rcboot
 after      = dbusd

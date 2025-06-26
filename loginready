@@ -1,9 +1,10 @@
 # Virtual service run before login is enabled.
 
-type = internal
-restart = false
-options = runs-on-console
+type       = internal
+restart    = false
+options    = runs-on-console
+waits-for  = sysctl
 
 depends-on = rcboot
-after = dbusd
-after = metalog
+after      = dbusd
+after      = metalog

@@ -4,4 +4,5 @@ depends-on = dbus-setup
 logfile = /var/log/dinit/dbus-daemon.log
 smooth-recovery = yes
 ready-notification = pipefd:3
+# waits-for = sysctl
 # socket-listen = /var/run/dbus/system_bus_socket

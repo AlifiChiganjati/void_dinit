@@ -1,4 +1,5 @@
-type = process
-command = /usr/bin/acpid -f
-logfile = /var/log/dinit/acpid.log
-depends-on = rootrw
+type 		= process
+command 	= /usr/bin/acpid -f
+logfile 	= /var/log/dinit/acpid.log
+depends-on 	= rootrw
+waits-for 	= rclocal

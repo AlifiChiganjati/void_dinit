@@ -62,3 +62,17 @@ if [ -z "$VIRTUALIZATION" ]; then
         mountpoint -q "$_cgroupv2" || mount -t cgroup2 -o nsdelegate cgroup2 "$_cgroupv2"
     fi
 fi
+
+# 🧩 NEW SECTION: Early-mount /var if using Btrfs subvolume
+if grep -q "subvol=/@var" /etc/fstab; then
+    echo "Mounting /var subvolume early (Btrfs)"
+    mkdir -p /var
+    mountpoint -q /var || mount /var || echo "⚠️  Warning: Failed to mount /var early"
+fi
+
+# Ensure logging directories exist
+mkdir -p /var/log
+touch /var/log/wtmp /var/log/btmp 2>/dev/null || true
+chmod 664 /var/log/wtmp /var/log/btmp 2>/dev/null || true
+
+

@@ -1,5 +1,5 @@
-type            = scripted
-command         = /etc/dinit.d/scripts/seatd-setup.sh
-logfile         = /var/log/dinit/seatd-setup.log
-depends-on      = seatd
-after		= sysctl
+type         = scripted
+command      = /etc/dinit.d/scripts/seatd-setup.sh
+logfile      = /var/log/dinit/seatd-setup.log
+depends-on   : seatd
+waits-for    : sysctl

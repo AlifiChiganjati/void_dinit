@@ -2,5 +2,5 @@ type            = process
 command         = /usr/bin/virtlogd
 smooth-recovery = true
 logfile         = /var/log/dinit/virtlogd.log
-depends-on      = dbusd
-before          = sysctl
+depends-on      : dbusd
+waits-for       : sysctl

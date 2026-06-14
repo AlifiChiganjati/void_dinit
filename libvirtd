@@ -2,7 +2,6 @@ type            = process
 command         = /usr/bin/libvirtd
 smooth-recovery = true
 logfile         = /var/log/dinit/libvirtd.log
-depends-on      = dbusd
-depends-on      = virtlogd
-depends-on      = virtlockd
-before          = sysctl
+depends-on      : dbusd
+depends-on      : virtlogd
+depends-on      : virtlockd

@@ -1,8 +1,9 @@
-type = process
-command = /sbin/agetty --noclear tty3 38400 linux
-restart = true
-depends-on = loginready
-termsignal = HUP
+type            = process
+command         = /sbin/agetty --noclear tty3 38400 linux
+restart         = true
+termsignal      = HUP
 smooth-recovery = true
-inittab-id = 3
-inittab-line = tty3
+inittab-id      = 3
+inittab-line    = tty3
+
+depends-on      : loginready

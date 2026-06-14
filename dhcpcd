@@ -1,5 +1,6 @@
-type 		   = process
-command 	 = /usr/bin/dhcpcd -B -M
-logfile 	 = /var/log/dinit/dhcpcd.log
-restart 	 = false
-depends-on = rcboot
+type        = process
+# command     = /usr/bin/dhcpcd -B -M --logfile /var/log/dinit/dhcpcd-service.log wlp4s0
+command = /usr/sbin/dhcpcd -B -M
+logfile     = /var/log/dinit/dhcpcd.log
+restart     = false
+depends-on  : rcboot

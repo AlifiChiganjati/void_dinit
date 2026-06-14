@@ -1,0 +1,6 @@
+type            = process
+command         = /usr/bin/php-fpm8.5 --nodaemonize
+smooth-recovery = true
+logfile         = /var/log/dinit/php-fpm8.5.log
+depends-on	: dbusd
+before		: loginready

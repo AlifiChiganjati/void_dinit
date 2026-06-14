@@ -1,4 +1,4 @@
 type       = process
 command    = /usr/libexec/rtkit-daemon
 logfile    = /var/log/dinit/rtkit.log
-depends-on = dbusd
+depends-on : dbusd

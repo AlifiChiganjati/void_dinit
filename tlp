@@ -3,4 +3,4 @@ command      = /usr/bin/tlp init start
 stop-command = /usr/bin/tlp init stop
 restart      = false
 logfile      = /var/log/dinit/tlp.log
-waits-for    = rootrw
+waits-for    : rootrw

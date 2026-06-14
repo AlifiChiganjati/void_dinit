@@ -2,5 +2,4 @@ type            = process
 command         = /usr/bin/uuidd -F -P
 logfile         = /var/log/dinit/uuidd.log
 run-as          = _uuidd
-depends-on      = uuidd-setup
-
+depends-on      : uuidd-setup
